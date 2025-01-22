@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validierung von Eingaben - Übung 24</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Benutzerdaten Validierung</h1>
+    <form id="userForm">
+        <div class="input-group">
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname">
+            <div id="error-vorname" class="error"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="nachname">Nachname:</label>
+            <input type="text" id="nachname" name="nachname">
+            <div id="error-nachname" class="error"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="geschlecht">Geschlecht (m/f):</label>
+            <input type="text" id="geschlecht" name="geschlecht">
+            <div id="error-geschlecht" class="error"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="alter">Alter:</label>
+            <input type="number" id="alter" name="alter">
+            <div id="error-alter" class="error"></div>
+        </div>
+
+        <button type="submit">Absenden</button>
+    </form>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Verhindert das Absenden des Formulars
+
+            // Fehler zurücksetzen
+            document.getElementById('error-vorname').textContent = '';
+            document.getElementById('error-nachname').textContent = '';
+            document.getElementById('error-geschlecht').textContent = '';
+            document.getElementById('error-alter').textContent = '';
+
+            // Werte aus den Eingabefeldern holen
+            const vorname = document.getElementById('vorname').value.trim();
+            const nachname = document.getElementById('nachname').value.trim();
+            const geschlecht = document.getElementById('geschlecht').value.trim().toLowerCase();
+            const alter = document.getElementById('alter').value.trim();
+
+            let isValid = true;
+
+            // Validierung Vorname
+            if (vorname.length < 2 || vorname.length > 100) {
+                document.getElementById('error-vorname').textContent = 'Vorname muss zwischen 2 und 100 Zeichen lang sein.';
+                isValid = false;
+            }
+
+            // Validierung Nachname
+            if (nachname.length < 2 || nachname.length > 100) {
+                document.getElementById('error-nachname').textContent = 'Nachname muss zwischen 2 und 100 Zeichen lang sein.';
+                isValid = false;
+            }
+
+            // Validierung Geschlecht
+            if (geschlecht !== 'm' && geschlecht !== 'f') {
+                document.getElementById('error-geschlecht').textContent = 'Geschlecht muss "m" (male) oder "f" (female) sein.';
+                isValid = false;
+            }
+
+            // Validierung Alter
+            if (!/^[0-9]+$/.test(alter) || parseInt(alter) >= 150) {
+                document.getElementById('error-alter').textContent = 'Alter muss eine Zahl unter 150 sein.';
+                isValid = false;
+            }
+
+            // Wenn alles gültig ist
+            if (isValid) {
+                alert('Alle Eingaben sind korrekt!');
+            }
+        });
+    </script>
+</body>
+</html>
