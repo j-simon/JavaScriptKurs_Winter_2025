@@ -1,0 +1,1 @@
+console.log([1,2,23,34].reduce((a,b) => a+b, -10));
