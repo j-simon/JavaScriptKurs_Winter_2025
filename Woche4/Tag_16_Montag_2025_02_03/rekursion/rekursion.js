@@ -1,0 +1,6 @@
+const recursiveFkt = () => {
+    recursiveFkt();
+}
+
+
+recursiveFkt();
