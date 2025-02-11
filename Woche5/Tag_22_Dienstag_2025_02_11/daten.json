@@ -1,0 +1,16 @@
+{
+  "Buchkatalog": [
+    {
+      "Sprache": "Deutsch",
+      "ISBN": 123456789,
+      "Autor": "John Doe",
+      "Titel": "XML - Grundlagen"
+    },
+    {
+      "Sprache": "Deutsch",
+      "ISBN": "123456789",
+      "Autor": "John Doe",
+      "Titel": "XML -Grundlagen"
+    }
+  ]
+}

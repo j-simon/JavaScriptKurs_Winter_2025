@@ -1,0 +1,18 @@
+
+<?xml version=“1.0″ encoding=“UTF-8″?>
+<Buchkatalog>
+  <!– Hier ist ein Kommentar –>
+    <Buch ISBN=“123456789″ Sprache=“Deutsch“>
+      <Autor>John Doe</Autor>
+      <Titel>XML-Grundlagen</Titel>
+    </Buch>
+    
+    <Buch ISBN=“987654321″ Sprache=“Englisch“>
+      <Titel>XML-Programmierung</Titel>
+      <Autor>Jane Smith</Autor>
+
+    </Buch>
+
+
+
+</Buchkatalog>
