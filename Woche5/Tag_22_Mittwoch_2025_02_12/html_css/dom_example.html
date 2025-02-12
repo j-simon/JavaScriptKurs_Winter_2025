@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>DOM-Example</title>
+  <link rel="stylesheet" href="../../css/styles.css" type="text/css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul id="ul">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1></h1>
+      <p></p>
+      <img alt="pause" src="abcd_cat_defg.png" />
+      <img alt= "arbeit" src="abcd__defg.png" />
+    </article>
+  </main>
+
+  <footer>
+    <nav>
+
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+  </footer>
+  <script>
+    // console.log(document.querySelector("ul>li:nth-child(3)")) ;//.innerHTML=`aaaa`;
+    // document.querySelector("ul>li:nth-child(3)").innerHTML = "<strong>hier!</strong>";
+    // document.querySelector("body > header:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(3)").innerHTML = "<strong>hier!!</strong>";
+    document.querySelector("#ul").querySelectorAll("li")[2]
+    const $$ = (qs) => Array.from(document.querySelectorAll(qs));
+console.log(  $$(`[src="cat"]`));
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="dom_script.js"></script> -->
+    <style>
+        /* Selektoren im css 
+          body ,title header meta : die vorgegeben Elemente(Tags) */
+
+        /* 1. Element-Selektor grob */
+        p {
+            color: red
+        }
+
+        /* 2. Klasse feiner */
+        .gruen {
+            color: green
+        }
+
+        /* 3. ID am feinstens */
+        #blau {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p class="gruen">Hallo !</p>
+
+
+    <p class="gruen">Hallo !</p>
+    <p id="blau">Hallo !</p>
+    <p>Hallo !</p>
+    <p>Hallo !</p>
+    <p>Hallo !</p>
+    <p>Hallo !</p>
+    <p>Hallo !</p>
+    <p>Hallo !</p>
+
+
+    <script>
+        const $ = (qs) => document.querySelector(qs);
+        const $$ = (qs) => Array.from(document.querySelectorAll(qs));
+
+        //console.log(document.querySelector('p').innerHTML = "Mittag");
+        console.log(document.querySelectorAll('p'));
+        let nodeList= document.querySelectorAll('p');
+
+        // nodeList[0].innerHTML="0"
+        // nodeList[1].innerHTML="1"
+        // nodeList[2].innerHTML="2"
+        // nodeList[3].innerHTML="3"
+        // nodeList[4].innerHTML="4"
+        for (let i=0; i< nodeList.length;i++)
+            nodeList[i].innerHTML = String(i)
+
+        $$("p").map(     (p,i) => {
+
+            if(i===2)  p.innerHTML ="-------" 
+        
+        }
+        )
+
+        $$("p")[4].innerHTML="neu"
+
+    </script>
+</body>
+
+</html>
