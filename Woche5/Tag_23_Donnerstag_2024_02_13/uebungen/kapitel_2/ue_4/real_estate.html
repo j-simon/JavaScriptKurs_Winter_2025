@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>Real estate agency XYZ</title>
+  <meta name="description" content="Real estate agency XYZ" />
+
+  <link rel="shortcut icon" href="favicon_real_estate.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="real_estate.css" type="text/css" media="screen" />
+</head>
+
+<body>
+  <header>
+    <a id="logo"></a>
+
+    <nav id="main_menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Objects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content_area">
+    <div id="content">
+      <h1>Welcome!</h1>
+      <h1>Welcome2!</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam.
+      </p>
+
+      <p>
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      </p>
+
+      <p>
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+        feugiat nulla facilisis.
+      </p>
+    </div>
+
+    <div id="sidebar">
+      <div class="sidebox">
+        <h2>Contact</h2>
+        <p>
+          <strong>Real estate agency</strong><br />
+          Main Street 123<br />
+          12345 Wherever
+        </p>
+
+        <p>
+          tel +49 (0) 123 - 234 556 765<br />
+          fax +49 (0) 123 - 19 03 375
+        </p>
+
+        <p>
+          <a href="#">info@xyz-agency.example.com</a><br />
+          <a href="#">www.xyz-agency.example.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer><a href="#">Imprint</a> | photo: © LOU_OATES - Fotolia.com</footer>
+  <script>
+    // 1. h1 funktion
+    const h1NodeList = document.querySelectorAll("h1") // Liste mehrer 
+    //h1NodeList[0].innerHTML="ausgetauscht";
+    h1NodeList.forEach(h1 => h1.innerHTML = "austausch")
+    // console.log(h1NodeList)
+
+
+    // 2. p funktion
+    const pNodeList = document.querySelectorAll("p") // Liste mehrer 
+    pNodeList.forEach(p => p.innerHTML = "neuer Inhalt!")
+    // console.log(pNodeList)
+
+    // 3. li funktion
+    const liNodeList = document.querySelectorAll("#main_menu li") // Liste mehrer 
+    liNodeList.forEach(li => li.innerHTML = "neuer ListenpunktInhalt!")
+    // console.log(liNodeList)
+
+    const aendereElement = (element, geaendertesHTML) => {
+      //  funktion
+      const nodeList = document.querySelectorAll(element) // Liste mehrer 
+      nodeList.forEach(element => element.innerHTML = geaendertesHTML)
+    }
+
+    aendereElement("p","noch einen neueren Text");
+
+
+
+  </script>
+</body>
+
+</html>

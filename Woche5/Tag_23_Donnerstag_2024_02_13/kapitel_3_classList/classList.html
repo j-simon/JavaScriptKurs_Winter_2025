@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta class=""  name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rot{
+            color:red;
+        }
+        .gruen {
+            color:green;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="gruen rot">
+     hallo
+    </div>
+<script>
+    //console.log(document.querySelector("div"))
+    
+    console.dir(document.querySelector("div").classList) // gruen, rot
+    console.log(document.querySelector("div").classList.item(0)) // gruen
+
+    // document.querySelector("div").classList.remove("gruen")
+    // document.querySelector("div").classList.add("gruen")
+
+    // gruen wird weggenommen, da es schon da ist
+    document.querySelector("div").classList.toggle("gruen") // umwechseln add/remove  oder remov/add
+
+    // console.log(document.querySelector("div").classList)
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* ---------------- CSS-Reset ------------------- */
+html,
+body,
+a,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+img,
+strong,
+ul,
+li,
+table,
+th,
+td,
+tr {
+  margin: 0px;
+  padding: 0px;
+  border: 0px none;
+  font-weight: normal;
+  font-style: inherit;
+  font-family: inherit;
+  font-variant: inherit;
+  text-decoration: none;
+  table-layout: inherit;
+}
+
+/* ---------------- Body / HTML ------------------- */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Lucida Grande, Verdana, Helvetica, Arial;
+  font-size: 1em;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 500px;
+  margin: auto;
+}
+
+/* ---------------- structure ------------------- */
+
+header {
+  box-shadow: 0px 0px 12px 1px rgba(50, 50, 50, 0.3);
+  background-image: url(real_estate.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 28rem;
+  position: relative;
+  width: 100%;
+}
+
+#logo {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  background-image: url(../img/logo.png);
+
+  width: 700px;
+  background-size: cover;
+  display: block;
+  height: 100px;
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+
+  transform: rotate(-10deg);
+}
+
+#logo img {
+  width: 100%;
+}
+
+#main_menu {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 5px solid #434c2d;
+  border-top: 1px solid #434c2d;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#content_area {
+  margin-top: 20px;
+}
+
+#content {
+  float: left;
+  width: 73%;
+  background-color: white;
+  box-shadow: 0px 0px 12px 1px rgba(50, 50, 50, 0.3);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  width: 25%;
+  margin-left: 75%;
+  box-sizing: border-box;
+}
+
+#sidebar:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0px;
+  visibility: hidden;
+}
+
+.sidebox {
+  box-shadow: 0px 0px 12px 1px rgba(50, 50, 50, 0.3);
+  margin-bottom: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  height: 30px;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 0.7em;
+}
+
+/* ---------------- Main Navi ------------------- */
+
+#main_menu ul {
+  display: table;
+  width: 100%;
+}
+
+#main_menu li {
+  line-height: 2rem;
+  border-left: 1px solid #434c2d;
+  display: table-cell;
+  text-align: center;
+}
+
+#main_menu a:link,
+#main_menu a:visited {
+  display: block;
+  color: #434c2d;
+  font-weight: bold;
+}
+
+#main_menu li:last-child {
+  border-right: 1px solid #434c2d;
+}
+
+#main_menu a:focus,
+#main_menu a:hover,
+#main_menu a:active {
+  background-color: #434c2d;
+  color: white;
+}
+
+/* ---------------- Sub Navi ------------------- */
+
+/* ---------------- Meta Navi ------------------- */
+
+footer a:link,
+footer a:visited {
+  color: #58585b;
+}
+
+footer a:focus,
+footer a:hover,
+footer a:active {
+  color: #714784;
+}
+
+/* ------ content  ------ */
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #434c2d;
+}
+
+h2 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #434c2d;
+}
+
+h3 {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+h4 {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+h5 {
+  font-size: 11px;
+  margin-bottom: 1px;
+}
+
+p {
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.black {
+  color: black;
+}
+.gray {
+  color: #808080;
+}
+.orange {
+  color: #eb690b;
+}
+.u {
+  text-decoration: underline;
+}
+.b {
+  font-weight: bold;
+}
+.i {
+  font-style: italic;
+}
+.align_right {
+  text-align: right;
+}
+.align_left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+strong {
+  font-weight: bold;
+}
+
+/* Content-Links */
+#content_area a:link,
+#content_area a:visited {
+  color: #b09d84;
+  font-weight: bold;
+}
+
+#content_area a:focus,
+#content_area a:hover,
+#content_area a:active {
+  text-decoration: underline;
+}
+
+/* Content-lists */
+
+#content ul {
+  margin: 10px 0px 10px 0px;
+}
+
+#content ul li {
+  list-style-position: outside;
+  list-style-type: disc;
+  margin-left: 30px;
+  line-height: 20px;
+}
+
+#content ul.bold li {
+  font-weight: bold;
+}
