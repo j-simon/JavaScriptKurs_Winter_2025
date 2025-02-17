@@ -1,4 +1,4 @@
     // Aufruf 
-    markiereChatTeilnehmer("ert");
+    markiereChatTeilnehmer("Her");
     // markiereChatTeilnehmer("er");
     

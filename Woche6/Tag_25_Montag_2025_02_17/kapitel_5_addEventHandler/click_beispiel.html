@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: red;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="color:blue">
+        A
+    </div>
+    <div>
+        B
+    </div>
+    
+    <div>
+        C
+    </div>
+    
+    <p>In der Konsole den log-anschauen! Jetzt auf die divs-klicken!</p>
+    <script>
+        // für das erste div
+        // document.querySelector("div").addEventListener("click",(e)=>console.log(e))
+        
+        // für alle divs
+        document.querySelectorAll("div")
+        .forEach(div => div.addEventListener("click",(e)=>{
+            console.log(e)}
+        ))
+    </script>
+</body>
+</html>
