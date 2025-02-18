@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rahmen {
+            border: 2px red dotted;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" value="Jens" disabled>
+
+    <img src="tasse.gif">
+    <div id="d1">IDL-Attribut - click me</div>
+    <div id="d2">Content-Attribut - click me</div>
+    <script>
+
+        // IDL-Attribute
+        document.querySelector("#d1").addEventListener("click", () => {
+            document.querySelector("input").type = "number";
+
+            // value Attribut kann zwar gesetzt werden für das DOM aber nicht im Eingabefeld zu sehen
+            document.querySelector("input").value = "9999";
+
+            document.querySelector("img").src = "alternative.png";
+            document.querySelector("input").disabled = false;
+
+            // class Attribut per IDL nicht möglich! es gibt aber eine 
+            // Lösung durch andere Bennnung, probier doch einmal className statt class!
+            document.querySelector("img").class = "rahmen nocheinrahmen"; // schreib / write
+            console.log(document.querySelector("img").class) // lesen /read
+        });
+
+        // Content-Attribut
+        document.querySelector("#d2").addEventListener("click", () => {
+            document.querySelector("input").setAttribute('type', "number"); // write 
+            document.querySelector("input").setAttribute('value', "9999");
+            document.querySelector("img").setAttribute('src', "alternative.png");
+            document.querySelector("img").setAttribute('class',"rahmen nocheinrahmen");
+
+            console.log(document.querySelector("img").getAttribute('class'))
+        });
+    </script>
+
+</body>
+
+</html>

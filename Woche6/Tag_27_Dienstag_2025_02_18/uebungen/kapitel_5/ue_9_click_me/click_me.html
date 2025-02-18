@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Please Click Me</title>
+    <script src="click_me.js" defer="defer"></script>
+  </head>
+
+  <body>
+    <script>
+      const handleClick= (e) => {
+        // e=null
+        alert('hallo!'+e);
+        alert('hallo2');
+      }
+    </script>
+    <div onclick="handleClick(this)">A</div>
+
+    <button id="click_me">Click Me</button>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Newsboard</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="newsboard.css"
+            media="screen"
+        />
+        <script src="newsboard.js" defer="defer"></script>
+    </head>
+
+    <body>
+        <div tabindex="1" class="newsboard_wrapper">
+            <div class="newsboard">
+                <span class="message_number"></span>
+
+                <a href="#" class="close_button" title="Delete message"
+                    >&times;</a
+                >
+
+                <div class="newsboard_content"></div>
+
+                <div class="paging_bar">
+                    <span class="float_left">
+                        <a href="#" title="first">«</a>
+                        <a href="http://example.com" title="prev">‹</a>
+                    </span>
+
+                    <span class="float_right">
+                        <a href="http://example.com" title="next">›</a>
+                        <a href="#" title="last">»</a>
+                    </span>
+
+                    <span class="progressbar">
+                        <progress
+                            max="3"
+                            value="1"
+                            id="messages_progress"
+                        ></progress>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
