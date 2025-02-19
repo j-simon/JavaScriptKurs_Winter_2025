@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+    p{
+        color:blue;
+    }
+</style>
+</head>
+<!-- inline style -->
+<body class="a1    a2    a3" value="100" id="b" style="color:red"> 
+    <p>Bitte die Konsole öffnen!</p>
+    <!-- hier ist kommentiere -->
+    <script defer="defer">
+
+
+        'use strict';
+        // ein Object worin ein key einw eiteres Object als value hat
+        const name =
+        {
+            vorname: "Jens",
+            nachname: "Simon",
+            adresse: { // das value ist ein weiteres Object
+                strasse: "Teststrasse",
+                plz: {  // und wieder ein Object als value
+                        zahl: 9999,
+                        buchstaben: ''
+                     }
+            },
+            html: "<!DOCTYPE html>....."
+        }
+
+        console.log(name);
+        console.log("Vorname:", name.adresse.strasse);
+        console.log("Plz:", name.adresse.plz.zahl);
+
+
+        // Die Objekte im DOM sind ebenfalls aus key-value Elementen aufgebaut 
+        console.log("body-innerHTML:", document.querySelector("body").innerHTML)
+        console.log("body-value:", document.querySelector("body").value) // "b"
+        console.log("style-innerHTML:", document.querySelector("style").innerHTML)
+        console.log("body-class:", document.querySelector("body").className)
+
+
+    </script>
+    Hallo, bin ich rot? ja per inline style im body element
+    <p title="die erklärung im tooltip">ein text-siehe den tooltip beim hovern</p>
+</body>
+
+</html>
