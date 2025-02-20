@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Koordinaten</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            perspective: 1000px;
+            margin: 20px;
+        }
+        #myElement {
+            width: 400px;
+            height: 300px;
+            background-color: lightblue;
+            border: 2px solid navy;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        .floating-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateZ(0px);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Bewege die Maus über das blaue Feld</h2>
+    <div class="container">
+        <div id="myElement">
+            <div class="floating-box" id="floatingBox"></div>
+        </div>
+    </div>
+    <p id="output">Koordinaten erscheinen hier...</p>
+
+    <script>
+        const element = document.querySelector("#myElement");
+        const floatingBox = document.querySelector("#floatingBox");
+        const output = document.querySelector("#output");
+
+        let zPosition = 0;
+
+        element.addEventListener("mousemove", (event) => {
+            const rect = element.getBoundingClientRect();
+            const relativeX = event.clientX - rect.left;
+            const relativeY = event.clientY - rect.top;
+
+            zPosition += event.movementZ || 0; // Simulierte Z-Achse Bewegung
+            floatingBox.style.transform = `translate(-50%, -50%) translateZ(${zPosition}px)`;
+
+            output.innerHTML = `
+                <strong>Veraltet:</strong> layerX: ${event.layerX}, layerY: ${event.layerY} <br>
+                <strong>Besser:</strong> offsetX: ${event.offsetX}, offsetY: ${event.offsetY} <br>
+                <strong>Best:</strong> getBoundingClientRect: ${relativeX}, ${relativeY} <br>
+                <strong>Viewport:</strong> clientX: ${event.clientX}, clientY: ${event.clientY} <br>
+                <strong>Dokument:</strong> pageX: ${event.pageX}, pageY: ${event.pageY} <br>
+                <strong>Bildschirm:</strong> screenX: ${event.screenX}, screenY: ${event.screenY} <br>
+                <strong>Absolute Position:</strong> x: ${event.x}, y: ${event.y} <br>
+                <strong>Z-Achse (Simulation):</strong> movementZ: ${zPosition}px
+            `;
+        });
+    </script>
+
+</body>
+</html>

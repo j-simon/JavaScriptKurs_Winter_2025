@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Font Size</title>
+  <script src="../../../lib/dom_helper.js" defer="defer"></script>
+
+
+  <style>
+    /* inline element */
+    p {
+      font-size: 50px;
+      color: red;
+    }
+  </style>
+  <link rel="stylesheet" href="screen.css">
+  <!-- <script src="font_size_refactored.js" defer="defer"></script> -->
+
+</head>
+
+<body style>
+  <button id="very_big">Very Large</button>
+  <button id="big">Large</button>
+  <button id="normal">Normal</button>
+  <button id="small">Small</button>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, error. Possimus in reiciendis quo numquam
+    assumenda, deleniti doloremque, facere alias odio animi est aliquam delectus corrupti ducimus fugiat ea commodi.
+  </p>
+  <script>
+    document.querySelector("#very_big")
+      .addEventListener(
+        "click",
+        () => document.querySelector("p").style.fontSize = "144px"
+      );
+
+    // document.querySelector("p").style.fontSize = "4px";
+
+
+    // document.querySelector("p").style.fontSize = "24px";
+
+    // document.querySelector("p").style.fontSize = "44px";
+
+
+
+  </script>
+</body>
+
+</html>
