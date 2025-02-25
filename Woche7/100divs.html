@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+        <div>1</div>
+
+    </div>
+
+    <script>
+const times = (n, fn) => {
+    const results = Array(n).fill(0);
+    results.forEach((x, i, r) => (r[i] = fn(i)));
+    return results;
+};
+
+times(100, () => document.querySelector("#container").innerHTML += "<div>1</div>");
+
+    </script>
+</body>
+</html>

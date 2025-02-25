@@ -1,0 +1,31 @@
+.price {
+    width: 4em;
+}
+
+#products td {
+    border: 1px solid black;
+}
+
+#products {
+    border-collapse: collapse;
+}
+
+#products th,
+#products td {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+#products th {
+    background-color: #aaa;
+}
+
+#products td > button {
+    margin-right: 5px;
+    font-size: 120%;
+    width: 40px;
+}
+
+.remove_product {
+    color: red;
+}

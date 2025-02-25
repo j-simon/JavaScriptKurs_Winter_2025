@@ -50,7 +50,7 @@
 
         let zPosition = 0;
 
-        element.addEventListener("mousemove", (event) => {
+        document.addEventListener("mousemove", (event) => {
             const rect = element.getBoundingClientRect();
             const relativeX = event.clientX - rect.left;
             const relativeY = event.clientY - rect.top;
