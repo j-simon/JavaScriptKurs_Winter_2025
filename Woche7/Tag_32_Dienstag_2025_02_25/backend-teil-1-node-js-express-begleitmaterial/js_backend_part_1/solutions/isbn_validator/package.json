@@ -1,0 +1,20 @@
+{
+  "name": "u06_isbn-validator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "chalk": "^5.3.0"
+  }
+}

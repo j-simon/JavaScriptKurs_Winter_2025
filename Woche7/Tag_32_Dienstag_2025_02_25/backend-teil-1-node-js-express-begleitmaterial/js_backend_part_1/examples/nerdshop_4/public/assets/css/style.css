@@ -1,0 +1,24 @@
+h1 {
+  color: rgb(204, 101, 83);
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #777;
+}
+
+body {
+  background-color: #ddd;
+}
+
+ul li a {
+  color: #333;
+}
+
+.menu-main a {
+  display: inline-block;
+  padding: 1rem;
+  color: #333;
+}

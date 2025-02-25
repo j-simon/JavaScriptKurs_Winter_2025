@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Management</title>
+    <link rel="stylesheet" href="../products.css" />
+    <script src="../../../lib/dom_helper.js"></script>
+    <script src="../product_list.js" defer="defer"></script>
+    <script src="product_manager.js" defer="defer"></script>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <table id="products">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price in €</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p id="new_product">
+      <input type="text" placeholder="name" class="name" />
+      €
+      <input type="number" max="999" placeholder="price" class="price" />
+      <button id="add_product">Add</button>
+    </p>
+  </body>
+</html>
